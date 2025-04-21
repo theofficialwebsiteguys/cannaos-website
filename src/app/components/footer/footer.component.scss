@@ -1,0 +1,108 @@
+@import '../../../styles.scss';
+
+.footer-wrapper {
+  background: darken($primary, 6%);
+  color: $text-light;
+  font-family: 'Inter', sans-serif;
+  padding: 4rem 2rem 2rem;
+  border-top: 1px solid rgba($text-light, 0.1);
+
+  .container {
+    max-width: 1248px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+  }
+
+  .logo-and-directory {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+
+    .logo {
+      max-width: 200px;
+      height: auto;
+      margin-bottom: 1rem;
+    }
+
+    .directory {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+
+      .directory-section {
+        text-align: left;
+
+        .section-header {
+          font-weight: 600;
+          font-size: 1rem;
+          margin-bottom: 0.5rem;
+        }
+
+        .list {
+          display: flex;
+          flex-direction: column;
+          gap: 0.5rem;
+
+          .list-item a {
+            color: $text-light;
+            text-decoration: none;
+            font-weight: 400;
+            font-size: 0.95rem;
+            transition: color 0.2s ease;
+
+            &:hover {
+              color: lighten($primary, 40%);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .copyright-and-socials {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+    font-size: 0.9rem;
+    color: rgba($text-light, 0.8);
+
+    .socials {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+
+      .social-icon a {
+        font-size: 20px;
+        color: $text-light;
+        transition: opacity 0.2s ease;
+
+        &:hover {
+          opacity: 0.8;
+        }
+      }
+    }
+  }
+
+  @media (min-width: 768px) {
+    .logo-and-directory {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-start;
+
+      .directory {
+        flex-direction: row;
+        justify-content: flex-end;
+        gap: 4rem;
+      }
+    }
+
+    .copyright-and-socials {
+      flex-direction: row;
+      justify-content: space-between;
+      text-align: left;
+    }
+  }
+}

@@ -1,0 +1,74 @@
+@import '../../../styles.scss';
+
+.marquee-container {
+  overflow: hidden;
+  white-space: nowrap;
+  background: $primary; // or transparent if needed
+  padding: 10px 0;
+}
+
+.marquee {
+  display: flex;
+  animation: scroll 25s linear infinite;
+  font-size: 22px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  gap: 20px; // 👈 consistent spacing between spans
+}
+
+.marquee span {
+  white-space: nowrap;
+}
+
+.marquee.paused {
+  animation-play-state: paused;
+}
+
+@keyframes scroll {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+
+
+/* Style for the pause/play control */
+.marquee-control {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  background: rgba(0,0,0,0.7);
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background 0.3s;
+}
+
+.marquee-control:hover {
+  background: rgba(0,0,0,0.9);
+}
+
+.marquee:hover,
+.marquee:focus {
+  animation-play-state: paused;
+}
+
+
+@media (max-width: 768px) {
+  /* Adjust the animation for a single span */
+  .marquee {
+    min-width: 100%;
+    animation: scroll-left-mobile 15s linear infinite;
+  }
+}
+
+@keyframes scroll-left-mobile {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}

@@ -1,0 +1,21 @@
+<nav class="navbar" [class.scrolled]="scrolled">
+  <div class="container">
+    <a class="logo" href="/">
+      <img src="assets/cannaos-logo.png" alt="CannaOS Logo" />
+    </a>
+
+    <button class="menu-btn" (click)="toggleMenu()">
+      <i class="fas" [ngClass]="menuOpen ? 'fa-xmark' : 'fa-bars'"></i>
+    </button>
+
+    <ul [class.open]="menuOpen" class="nav-links">
+      <li><a href="#features" (click)="closeMenu()">Mobile App</a></li>
+      <li><a href="#rewards" (click)="closeMenu()">Rewards Program</a></li>
+      <li><a href="#ecommerce" (click)="closeMenu()">eCommerce</a></li>
+      <li><a href="#kiosk" (click)="closeMenu()">In-Store Kiosk</a></li>
+      <li><a href="#contact" (click)="closeMenu()">Contact</a></li>
+    </ul>
+
+    <a href="#demo" class="btn cta-button" (click)="closeMenu()">Book Demo</a>
+  </div>
+</nav>

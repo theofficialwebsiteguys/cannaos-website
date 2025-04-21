@@ -1,0 +1,121 @@
+@use "sass:color";
+@import '../../../styles.scss';
+
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 3rem;
+  padding: 1rem 8rem;
+  min-height: 70vh;
+  background: #f3f6f4;
+
+  .hero-image {
+    flex: 1 1 40%;
+    display: flex;
+    justify-content: center;
+
+    img {
+      max-width: 480px;
+      width: 100%;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    }
+  }
+
+  .hero-content {
+    flex: 1 1 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    h1 {
+      font-size: 3rem;
+      font-weight: 700;
+      color: $text-dark;
+      line-height: 1.25;
+
+      span {
+        color: $primary;
+      }
+    }
+
+    p {
+      margin: 1.5rem 0 2.5rem;
+      font-size: 1.125rem;
+      color: $secondary;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 1.25rem;
+
+      .btn {
+        font-family: 'Inter', sans-serif;
+        font-size: 1rem;
+        font-weight: 600;
+        padding: 0.75rem 1.6rem;
+        border-radius: 12px;
+        text-decoration: none;
+        transition: all 0.2s ease;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+
+        &.btn-primary {
+          background-color: $primary;
+          color: $text-light;
+          box-shadow: 0 3px 8px rgba(110, 146, 119, 0.25);
+
+          &:hover {
+            background-color: color.adjust($primary, $lightness: -6%);
+          }
+        }
+
+        &.btn-outline {
+          background-color: transparent;
+          border: 2px solid $primary;
+          color: $primary;
+
+          &:hover {
+            background-color: $primary;
+            color: $text-light;
+          }
+        }
+      }
+    }
+  }
+
+  .hero-image {
+    flex: 1 1 400px;
+    display: flex;
+    justify-content: center;
+
+    img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    }
+  }
+
+  @media (max-width: 768px) {
+    flex-direction: column-reverse;
+    text-align: center;
+    padding: 3rem 1.5rem;
+
+    .hero-buttons {
+      flex-direction: column;
+      align-items: center;
+
+      .btn {
+        width: 100%;
+        justify-content: center;
+      }
+    }
+
+    .hero-image {
+      margin-bottom: 2rem;
+    }
+  }
+}

@@ -1,0 +1,62 @@
+@import '../../../styles.scss';
+
+.why-cannaos-section {
+    display: flex;
+    flex-direction: column;
+    gap: 6rem;
+    padding: 5rem 8rem;
+    background-color: $background;
+  }
+  
+  .why-cannaos {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 3rem;
+  
+    &.reverse {
+      flex-direction: row-reverse;
+    }
+  
+    .why-image,
+    .why-content {
+      flex: 1 1 48%;
+    }
+  
+    .why-image img {
+      width: 100%;
+      border-radius: 20px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+    }
+  
+    .why-content {
+      h2 {
+        font-size: 2rem;
+        font-weight: 700;
+        color: $text-dark;
+        margin-bottom: 0.5rem;
+      }
+  
+      h4 {
+        color: $primary;
+        font-weight: 600;
+        margin-bottom: 1rem;
+      }
+  
+      p {
+        font-size: 1rem;
+        color: $secondary;
+      }
+    }
+  
+    @media (max-width: 768px) {
+      flex-direction: column;
+      text-align: center;
+  
+      .why-content {
+        align-items: center;
+      }
+    }
+  }
+  

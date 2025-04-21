@@ -1,1 +1,52 @@
-/* You can add global styles to this file, and also import other style files */
+// === CannaOS Brand Colors ===
+$primary: #6e9277;         // Teal
+$secondary: #333333;       // Dark Gray
+$accent: #8e24aa;          // Optional accent purple
+$background: #f9fbfc;      // Light background
+$text-dark: #1c1c1e;       // Primary text
+$text-light: #ffffff;      // Light text
+$border: #e0e0e0;          // Soft borders
+$success: #43a047;
+$error: #e53935;
+$warning: #fbc02d;
+$info: #29b6f6;
+
+.btn {
+    background-color: $primary;
+    color: $text-light;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 0.6rem 1.4rem;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: background-color 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: 0 2px 6px rgba(110, 146, 119, 0.3); // soft shadow using $primary
+  
+    &:hover {
+      background-color: darken($primary, 6%);
+      box-shadow: 0 4px 10px rgba(110, 146, 119, 0.35);
+    }
+  
+    &:active {
+      transform: scale(0.98);
+    }
+  
+    &:disabled {
+      background-color: lighten($primary, 20%);
+      cursor: not-allowed;
+      opacity: 0.6;
+    }
+  }
+  
+
+  body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    color: $text-light; // optional: keeps it brand-aligned
+    background-color: $background;
+    line-height: 1.6;
+  }
+  
