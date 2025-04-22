@@ -6,20 +6,18 @@
   justify-content: space-between;
   align-items: center;
   gap: 3rem;
-  padding: 1rem 8rem;
-  min-height: 70vh;
+  padding: 0 8rem;
+  min-height: 60vh;
   background: #f3f6f4;
 
   .hero-image {
-    flex: 1 1 40%;
+    flex: 1 1 400px;
     display: flex;
     justify-content: center;
 
     img {
-      max-width: 480px;
-      width: 100%;
-      border-radius: 20px;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+      max-width: 100%;
+      height: auto;
     }
   }
 
@@ -86,18 +84,7 @@
     }
   }
 
-  .hero-image {
-    flex: 1 1 400px;
-    display: flex;
-    justify-content: center;
 
-    img {
-      max-width: 100%;
-      height: auto;
-      border-radius: 20px;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-    }
-  }
 
   @media (max-width: 768px) {
     flex-direction: column-reverse;
